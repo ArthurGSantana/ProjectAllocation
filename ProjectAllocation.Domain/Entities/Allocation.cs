@@ -13,7 +13,7 @@ namespace ProjectAllocation.Domain.Entities
         public Guid AllocationStatusId { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Observations { get; set; }
+        public string? Observations { get; set; }
         public float HoursPerWeek { get; set; }
         public bool Inactive { get; set; }
         public virtual Project Project { get; set; }
