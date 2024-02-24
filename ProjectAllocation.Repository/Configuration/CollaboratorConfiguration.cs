@@ -27,7 +27,6 @@ namespace ProjectAllocation.Repository.Configuration
 
             builder.HasOne(c => c.User)
                .WithOne()
-               .HasForeignKey<Collaborator>(c => c.UserId)
                .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasOne(c => c.Contract)

@@ -11,11 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F24980ED-A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9C29C69E-715E-421E-B3B6-CCFBA3314A1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectAllocation.Repository", "ProjectAllocation.Repository\ProjectAllocation.Repository.csproj", "{49C38C01-8407-4E89-9790-1D7AEE88ED78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectAllocation.Repository", "ProjectAllocation.Repository\ProjectAllocation.Repository.csproj", "{49C38C01-8407-4E89-9790-1D7AEE88ED78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectAllocation.Domain", "ProjectAllocation.Domain\ProjectAllocation.Domain.csproj", "{6839EDD3-B71B-43B2-AC74-3F9074DA4E71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectAllocation.Domain", "ProjectAllocation.Domain\ProjectAllocation.Domain.csproj", "{6839EDD3-B71B-43B2-AC74-3F9074DA4E71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectAllocation.IoC", "ProjectAllocation.IoC\ProjectAllocation.IoC.csproj", "{EBF6DE40-2BB9-4380-9643-E3EC0C90752C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectAllocation.IoC", "ProjectAllocation.IoC\ProjectAllocation.IoC.csproj", "{EBF6DE40-2BB9-4380-9643-E3EC0C90752C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

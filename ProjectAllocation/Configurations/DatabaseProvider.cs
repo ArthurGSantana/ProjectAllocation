@@ -17,7 +17,7 @@
             var connString = _configuration.GetConnectionString("DatabasePostgres")
                 .Replace("{DATABASE_USERNAME}", usernameDatabase)
                 .Replace("{DATABASE_PASSWORD}", passwordDatabase);
-
+            Console.WriteLine(connString);
             return connString;
         }
     }

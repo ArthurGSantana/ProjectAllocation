@@ -11,7 +11,6 @@
         public bool isLeader { get; set; }
         public string ImageURL { get; set; }
         public Guid AddressId { get; set; }
-        public Guid UserId { get; set; }
         public Guid ContractId { get; set; }
         public bool Inactive { get; set; }
         public virtual Address Address { get; set; }
