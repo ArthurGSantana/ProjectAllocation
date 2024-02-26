@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProjectAllocation.Domain.Entities;
-using ProjectAllocation.Domain.Interfaces;
+using ProjectAllocation.Domain.Interfaces.Repository;
 using System.Linq.Expressions;
 
 namespace ProjectAllocation.Repository.Repository

@@ -1,7 +1,7 @@
 ﻿using ProjectAllocation.Domain.Entities;
 using System.Linq.Expressions;
 
-namespace ProjectAllocation.Domain.Interfaces
+namespace ProjectAllocation.Domain.Interfaces.Repository
 {
     public interface IBaseRepository<T> where T : BaseIdentity
     {

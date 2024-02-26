@@ -16,13 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Validator\" />
-    <Folder Include="ViewModel\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ProjectAllocation.Domain\ProjectAllocation.Domain.csproj" />
     <ProjectReference Include="..\ProjectAllocation.Repository\ProjectAllocation.Repository.csproj" />
   </ItemGroup>
 
