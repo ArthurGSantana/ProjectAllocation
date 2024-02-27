@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ProjectAllocation.Domain.Interfaces.Service;
+using ProjectAllocation.API.Interfaces.Service;
 
 namespace ProjectAllocation.API.Controllers
 {
@@ -14,9 +14,11 @@ namespace ProjectAllocation.API.Controllers
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Get(Guid id)
         {
-            var collaborator = await _collaboratorService.GetByIdAsync(id);
+            var collaborator = await _collaboratorService.GetById(id);
 
             if (collaborator == null)
             {

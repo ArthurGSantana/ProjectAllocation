@@ -1,4 +1,4 @@
-﻿namespace ProjectAllocation.Domain.Interfaces.Service
+﻿namespace ProjectAllocation.API.Interfaces.Service
 {
     public interface IBaseService<T>
     {
