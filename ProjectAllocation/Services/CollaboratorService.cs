@@ -13,9 +13,9 @@ namespace ProjectAllocation.API.Services
             this._unitOfWork = unitOfWork;
         }
 
-        public Task<CollaboratorDTO> GetById(Guid id)
+        public async Task<CollaboratorDTO> GetById(Guid id)
         {
-            throw new NotImplementedException();
+            return await _unitOfWork.CollaboratorRepository.GetByIdAsync(id);
         }
 
         public Task<IEnumerable<CollaboratorDTO>> GetAll()
