@@ -13,6 +13,18 @@ namespace ProjectAllocation.API.Configurations
             CreateMap<Collaborator, CollaboratorDTO>().ReverseMap();
 
             #endregion
+
+            #region Address
+
+            CreateMap<Address, AddressDTO>().ReverseMap();
+
+            #endregion
+
+            #region Contract
+
+            CreateMap<Contract, ContractDTO>().ReverseMap();
+
+            #endregion
         }
     }
 }

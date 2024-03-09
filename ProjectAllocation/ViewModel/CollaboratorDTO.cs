@@ -13,7 +13,7 @@ namespace ProjectAllocation.API.ViewModel
         public bool isLeader { get; set; }
         public string ImageURL { get; set; }
         public bool Inactive { get; set; }
-        public Address Address { get; set; }
+        public AddressDTO Address { get; set; }
         public Contract Contract { get; set; }
     }
 }

@@ -4,8 +4,8 @@
     {
         Task<T> GetById(Guid id);
         Task<IEnumerable<T>> GetAll();
-        Task<T> Add(T entity);
-        void Update(T entity);
+        T Add(T entity);
+        Task<bool> Update(T entity);
         void Delete(T entity);
     }
 }

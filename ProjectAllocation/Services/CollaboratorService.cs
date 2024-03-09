@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using ProjectAllocation.API.Interfaces.Service;
 using ProjectAllocation.API.ViewModel;
+using ProjectAllocation.Domain.Entities;
 using ProjectAllocation.Domain.Interfaces.Repository;
-using ProjectAllocation.Domain.Interfaces.Service;
 
 namespace ProjectAllocation.API.Services
 {
-    public class CollaboratorService : ICollaboratorService<CollaboratorDTO>
+    public class CollaboratorService : ICollaboratorService
     {
         protected readonly IUnitOfWork _unitOfWork;
         protected readonly IMapper _mapper;
@@ -24,17 +24,27 @@ namespace ProjectAllocation.API.Services
             return _mapper.Map<CollaboratorDTO>(collaborator);
         }
 
-        public Task<IEnumerable<CollaboratorDTO>> GetAll()
+        public async Task<IEnumerable<CollaboratorDTO>> GetAll()
         {
-            throw new NotImplementedException();
+            var collaborators = await _unitOfWork.CollaboratorRepository.GetAllAsync();
+
+            return _mapper.Map<IEnumerable<CollaboratorDTO>>(collaborators);
         }
 
-        public Task<CollaboratorDTO> Add(CollaboratorDTO entity)
+        public CollaboratorDTO? Add(CollaboratorDTO entity)
         {
-            throw new NotImplementedException();
+            var collaborator = _mapper.Map<Collaborator>(entity);
+
+            collaborator.Create();
+
+            _unitOfWork.CollaboratorRepository.Add(collaborator);
+
+            var result = _mapper.Map<CollaboratorDTO>(collaborator);
+
+            return _unitOfWork.Commit() ? result : null;
         }
 
-        public void Update(CollaboratorDTO entity)
+        public async Task<bool> Update(CollaboratorDTO entity)
         {
             throw new NotImplementedException();
         }
