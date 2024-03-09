@@ -28,17 +28,13 @@ namespace ProjectAllocation.API.Services
             throw new NotImplementedException();
         }
 
-        public AddressDTO? Add(AddressDTO entity)
+        public Address Add(Address entity)
         {
-            var address = _mapper.Map<Address>(entity);
+            entity.Create();
 
-            address.Create();
+            _unitOfWork.AddressRepository.Add(entity);
 
-            _unitOfWork.AddressRepository.Add(address);
-
-            var result = _mapper.Map<AddressDTO>(address);
-
-            return _unitOfWork.Commit() ? result : null;
+            return entity;
         }
 
         public Task<bool> Update(AddressDTO entity)
@@ -50,6 +46,5 @@ namespace ProjectAllocation.API.Services
         {
             throw new NotImplementedException();
         }
-
     }
 }
